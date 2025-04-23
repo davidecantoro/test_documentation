@@ -5,5 +5,5 @@ jl
    :maxdepth: 4
 
    main
-   calculator
-   read_write
+   folder1/calculator
+   folder2/read_write
