@@ -14,6 +14,8 @@ jl documentation
    :caption: Contents:
 
    modules
+   folder1
+   folder2
 
 Indices and tables
 ==================
