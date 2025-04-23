@@ -69,7 +69,7 @@ html_show_copyright = True
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
-repository_url = f"https://github.com/davidecantoro/test_documentation.git"
+repository_url = f"https://github.com/davidecantoro/test_documentation"
 html_context = {
     "menu_links": [
         (
