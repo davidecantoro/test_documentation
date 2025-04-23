@@ -2,7 +2,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-project = 'jl'
+project = 'test_proj'
 copyright = '2023, redandgreen.co.uk'
 author = 'Mr Moo'
 release = '0.0.1'
@@ -15,5 +15,8 @@ extensions = [
 ]
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
+
+html_permalinks_icon = '<span>#</span>'
+html_theme = 'sphinxawesome_theme'
 html_static_path = ['_static']
