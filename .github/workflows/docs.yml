@@ -18,10 +18,10 @@ jobs:
         uses: conda-incubator/setup-miniconda@v2
         with:
           auto-update-conda: true
-          python-version: 3.10
           # path relativo alla root del repo:
           environment-file: ./anaconda/environment.yml
           activate-environment: docs-env
+          clean-patched-environmen
 
       - name: Generate API stubs
         run: |
