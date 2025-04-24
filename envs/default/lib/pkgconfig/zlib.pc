@@ -1,0 +1,13 @@
+prefix=/Users/davide/FederatedLearning/canc/test_documentation/envs/default
+exec_prefix=/Users/davide/FederatedLearning/canc/test_documentation/envs/default
+libdir=/Users/davide/FederatedLearning/canc/test_documentation/envs/default/lib
+sharedlibdir=/Users/davide/FederatedLearning/canc/test_documentation/envs/default/lib
+includedir=/Users/davide/FederatedLearning/canc/test_documentation/envs/default/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

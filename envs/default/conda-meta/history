@@ -1,0 +1,70 @@
+==> 2025-04-23 19:20:32 <==
+# cmd: /opt/anaconda3/bin/conda create --override-channels --yes --prefix /Users/davide/FederatedLearning/canc/test_documentation/envs/default --channel defaults --channel https://conda.anaconda.org/conda-forge/ sphinx=8.2.3 myst-parser python
+# conda version: 24.1.2
++conda-forge/noarch::markdown-it-py-3.0.0-pyhd8ed1ab_1
++conda-forge/noarch::mdit-py-plugins-0.4.2-pyhd8ed1ab_1
++conda-forge/noarch::myst-parser-4.0.1-pyhd8ed1ab_0
++defaults/noarch::charset-normalizer-3.3.2-pyhd3eb1b0_0
++defaults/noarch::snowballstemmer-2.2.0-pyhd3eb1b0_0
++defaults/noarch::sphinxcontrib-applehelp-2.0.0-pyhd3eb1b0_1
++defaults/noarch::sphinxcontrib-devhelp-2.0.0-pyhd3eb1b0_0
++defaults/noarch::sphinxcontrib-htmlhelp-2.1.0-pyhd3eb1b0_0
++defaults/noarch::sphinxcontrib-jsmath-1.0.1-pyhd3eb1b0_0
++defaults/noarch::sphinxcontrib-qthelp-2.0.0-pyhd3eb1b0_1
++defaults/noarch::sphinxcontrib-serializinghtml-2.0.0-pyhd3eb1b0_0
++defaults/noarch::tzdata-2025a-h04d1e81_0
++defaults/osx-arm64::alabaster-0.7.16-py313hca03da5_0
++defaults/osx-arm64::babel-2.16.0-py313hca03da5_0
++defaults/osx-arm64::brotli-python-1.0.9-py313h313beb8_9
++defaults/osx-arm64::bzip2-1.0.8-h80987f9_6
++defaults/osx-arm64::ca-certificates-2025.2.25-hca03da5_0
++defaults/osx-arm64::certifi-2025.1.31-py313hca03da5_0
++defaults/osx-arm64::docutils-0.21.2-py313hca03da5_0
++defaults/osx-arm64::expat-2.7.1-h313beb8_0
++defaults/osx-arm64::idna-3.7-py313hca03da5_0
++defaults/osx-arm64::imagesize-1.4.1-py313hca03da5_0
++defaults/osx-arm64::jinja2-3.1.6-py313hca03da5_0
++defaults/osx-arm64::libcxx-14.0.6-h848a8c0_0
++defaults/osx-arm64::libffi-3.4.4-hca03da5_1
++defaults/osx-arm64::libmpdec-4.0.0-h80987f9_0
++defaults/osx-arm64::markupsafe-3.0.2-py313h80987f9_0
++defaults/osx-arm64::mdurl-0.1.0-py313hca03da5_0
++defaults/osx-arm64::ncurses-6.4-h313beb8_0
++defaults/osx-arm64::openssl-3.0.16-h02f6b3c_0
++defaults/osx-arm64::packaging-24.2-py313hca03da5_0
++defaults/osx-arm64::pip-25.0-py313hca03da5_0
++defaults/osx-arm64::pygments-2.19.1-py313hca03da5_0
++defaults/osx-arm64::pysocks-1.7.1-py313hca03da5_0
++defaults/osx-arm64::python-3.13.2-h4862095_100_cp313
++defaults/osx-arm64::python_abi-3.13-0_cp313
++defaults/osx-arm64::pyyaml-6.0.2-py313h80987f9_0
++defaults/osx-arm64::readline-8.2-h1a28f6b_0
++defaults/osx-arm64::requests-2.32.3-py313hca03da5_1
++defaults/osx-arm64::roman-numerals-py-3.1.0-py313hca03da5_0
++defaults/osx-arm64::setuptools-75.8.0-py313hca03da5_0
++defaults/osx-arm64::sphinx-8.2.3-py313h80987f9_0
++defaults/osx-arm64::sqlite-3.45.3-h80987f9_0
++defaults/osx-arm64::tk-8.6.14-h6ba3021_0
++defaults/osx-arm64::urllib3-2.3.0-py313hca03da5_0
++defaults/osx-arm64::wheel-0.45.1-py313hca03da5_0
++defaults/osx-arm64::xz-5.6.4-h80987f9_1
++defaults/osx-arm64::yaml-0.2.5-h1a28f6b_0
++defaults/osx-arm64::zlib-1.2.13-h18a0788_1
+# update specs: ['myst-parser', 'python', 'sphinx=8.2.3']
+==> 2025-04-23 20:02:54 <==
+# cmd: /opt/anaconda3/bin/conda install --override-channels --yes --prefix /Users/davide/FederatedLearning/canc/test_documentation/envs/default --channel defaults --channel https://conda.anaconda.org/conda-forge/ sphinxawesome-theme sphinx=7.2.6
+# conda version: 24.1.2
+-conda-forge/noarch::myst-parser-4.0.1-pyhd8ed1ab_0
+-defaults/osx-arm64::docutils-0.21.2-py313hca03da5_0
+-defaults/osx-arm64::sphinx-8.2.3-py313h80987f9_0
++conda-forge/noarch::myst-parser-3.0.1-pyhd8ed1ab_0
++conda-forge/noarch::sphinx-7.2.6-pyhd8ed1ab_0
++conda-forge/noarch::sphinxawesome-theme-5.2.0-pyhd8ed1ab_1
++defaults/osx-arm64::beautifulsoup4-4.12.3-py313hca03da5_0
++defaults/osx-arm64::colorama-0.4.6-py313hca03da5_0
++defaults/osx-arm64::docutils-0.18.1-py313hca03da5_3
++defaults/osx-arm64::importlib-metadata-8.5.0-py313hca03da5_0
++defaults/osx-arm64::soupsieve-2.5-py313hca03da5_0
++defaults/osx-arm64::zipp-3.21.0-py313hca03da5_0
+# update specs: ['sphinx=7.2.6', 'sphinxawesome-theme']
+# neutered specs: ['sphinx==7.2.6']

@@ -1,0 +1,27 @@
+name: My Sphinx Docs
+description: Creating our first Sphinx docs for our dummy project
+
+commands:
+  create_docs_project:
+    unix: sphinx-quickstart
+
+  build_docs:
+    unix: rm -rf build && sphinx-build -b html ./source ./docs
+
+  serve:
+    unix: python -m http.server --directory ./docs
+
+  apidoc:
+    unix: rm -rf source/api && sphinx-apidoc -f -o source/api src
+
+env_specs:
+  default:
+    packages:
+      - python
+      - sphinx=7.2.6
+      - myst-parser
+      - sphinxawesome-theme
+
+channels:
+  - defaults
+  - https://conda.anaconda.org/conda-forge/
