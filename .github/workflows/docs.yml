@@ -20,7 +20,7 @@ jobs:
         auto-update-conda: true
         python-version: 3.10
         environment-file: anaconda/documentations_environment.yml
-        activate-environment: 'My Sphinx Docs'
+        activate-environment: 'docs-env'
 
 
     - name: Generate API stubs

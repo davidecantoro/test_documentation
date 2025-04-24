@@ -1,4 +1,4 @@
-name: My Sphinx Docs
+name: docs-env
 channels:
   - defaults
   - conda-forge
