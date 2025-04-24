@@ -21,7 +21,7 @@ jobs:
           # path relativo alla root del repo:
           environment-file: ./anaconda/environment.yml
           activate-environment: docs-env
-          clean-patched-environmen
+          clean-patched-environment-file: true
 
       - name: Generate API stubs
         run: |
