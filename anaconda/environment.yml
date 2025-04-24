@@ -3,7 +3,7 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python
+  - python=3.10
   - sphinx=7.2.6
   - myst-parser
   - sphinxawesome-theme
