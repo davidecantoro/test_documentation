@@ -1,0 +1,38 @@
+# .github/workflows/docs.yml
+name: Build & Deploy Sphinx Docs
+
+on:
+  push:
+    branches:
+      - main      # o la tua branch di default
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Conda
+      uses: conda-incubator/setup-miniconda@v2
+      with:
+        auto-update-conda: true
+        # (opzionale) imposta la versione di Python
+        python-version: 3.10
+        # prendi l'env da anaconda-project.yml
+        environment-file: anaconda-project.yml
+        activate-environment: 'My Sphinx Docs'
+        extra-packages: anaconda-project
+
+    - name: Generate API stubs
+      run: anaconda-project run apidoc
+
+    - name: Build HTML docs
+      run: anaconda-project run build_docs
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./docs
