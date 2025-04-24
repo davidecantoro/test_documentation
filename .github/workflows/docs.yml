@@ -4,36 +4,38 @@ name: Build & Deploy Sphinx Docs
 on:
   push:
     branches:
-      - main      # o la tua branch di default
+      - main
 
 jobs:
   docs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Conda
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        auto-update-conda: true
-        python-version: 3.10
-        environment-file: anaconda/documentations_environment.yml
-        activate-environment: 'docs-env'
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          auto-update-conda: true
+          python-version: 3.10
+          # path relativo alla root del repo:
+          environment-file: ./anaconda/environment.yml
+          activate-environment: docs-env
 
+      - name: Generate API stubs
+        run: |
+          conda run -n docs-env --no-capture-output anaconda-project run apidoc
 
-    - name: Generate API stubs
-      run: anaconda-project run apidoc
+      - name: Build HTML docs
+        run: |
+          conda run -n docs-env --no-capture-output anaconda-project run build_docs
 
-    - name: Build HTML docs
-      run: anaconda-project run build_docs
-
-    - name: Deploy to gh-pages branch
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs         # cartella generata dal build
-        publish_branch: gh-pages    # branch di destinazione
-        user_name: github-actions[bot]
-        user_email: github-actions[bot]@users.noreply.github.com
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
