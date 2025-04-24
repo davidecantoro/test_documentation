@@ -1,0 +1,10 @@
+name: My Sphinx Docs
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python
+  - sphinx=7.2.6
+  - myst-parser
+  - sphinxawesome-theme
+  - anaconda-project
