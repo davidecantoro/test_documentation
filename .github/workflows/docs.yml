@@ -25,17 +25,11 @@ jobs:
 
       - name: Generate API stubs
         shell: bash -l {0}
-        run: |
-          source ~/miniconda3/etc/profile.d/conda.sh   # o dove hai installato Miniconda
-          conda activate docs-env
-          anaconda-project run apidoc
+        run: anaconda-project run apidoc
 
       - name: Build HTML docs
         shell: bash -l {0}
-        run: |
-          source ~/miniconda3/etc/profile.d/conda.sh
-          conda activate docs-env
-          anaconda-project run build_docs
+        run: anaconda-project run build_docs
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
