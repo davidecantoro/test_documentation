@@ -31,8 +31,11 @@ jobs:
     - name: Build HTML docs
       run: anaconda-project run build_docs
 
-    - name: Deploy to GitHub Pages
+    - name: Deploy to gh-pages branch
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
+        publish_dir: ./docs         # cartella generata dal build
+        publish_branch: gh-pages    # branch di destinazione
+        user_name: github-actions[bot]
+        user_email: github-actions[bot]@users.noreply.github.com
